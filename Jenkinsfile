@@ -2,7 +2,7 @@ pipeline {
     agent 
     tools {
         // Note: this should match with the tool name configured in your jenkins instance (JENKINS_URL/configureTools/)
-        maven "MVN_HOME"
+        maven "maven"
         
     }
 	 environment {
@@ -15,7 +15,7 @@ pipeline {
         // Repository where we will upload the artifact
         NEXUS_REPOSITORY = "Hiring_app"
         // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "Nexus_Server"
+        NEXUS_CREDENTIAL_ID = "nexus"
     }
     stages {
         stage("clone code") {
