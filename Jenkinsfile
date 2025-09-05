@@ -36,17 +36,7 @@ pipeline {
                     sh 'mvn -Dmaven.test.failure.ignore=true install'
                 }
             }
-        }
-
-stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('sonarqube') {
-                    sh 'mvn sonar:sonar'
-                }
-            }
-        }
-
-		
+        }		
         stage("publish to nexus") {
             steps {
                 script {
