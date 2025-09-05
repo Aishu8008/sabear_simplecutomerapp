@@ -27,7 +27,7 @@ pipeline {
         stage("SonarCloud") {
             steps {
                 withSonarQubeEnv('sonarqube') {
-                    sh '''$SCANNER_HOME/bin/sonar_scanner \
+                    sh '''$SCANNER_HOME/bin/sonar-scanner\
                         -Dsonar.projectKey=Ncodeit \
                         -Dsonar.projectName=Ncodeit \
                         -Dsonar.projectVersion=2.0 \
