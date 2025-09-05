@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage("clone code") {
             steps {
-                git 'https://github.com/betawins/sabear_simplecutomerapp.git'
+                git 'https://github.com/Aishu8008/sabear_simplecutomerapp.git'
             }
         }
         stage("mvn build") {
